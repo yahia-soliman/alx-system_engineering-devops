@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir -p weclome/"to\nschool\nschool"/school
+mkdir -p weclome/to/school
