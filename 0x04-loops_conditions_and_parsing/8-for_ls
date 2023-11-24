@@ -1,1 +1,6 @@
 #!/usr/bin/env bash
+#Display the tasks in a list format
+files=$(find . -maxdepth 1 -not -name ".*" | cut -d "/" -f 2 | cut -d "-" -f 2)
+for file in $files; do
+	echo "$file"
+done
