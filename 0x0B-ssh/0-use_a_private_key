@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# connect to the 34.204.82.71 with the user ubuntu and the identity file school
+ssh -i ~/.ssh/school ubuntu@34.204.82.71
