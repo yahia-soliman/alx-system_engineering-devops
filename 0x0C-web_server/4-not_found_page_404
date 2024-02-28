@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# setup nginx web server on an ubuntu machine
+apt-get install nginx -y;
+ufw allow 'Nginx HTTP';
+service nginx restart;
+
+file_path='/etc/nginx/sites-available/default'
+search_for='server_name _;'
+replace_with="server_name _;\n\n\terror_page 404 \/not_found;\n\tlocation \/not_found {\n\t\treturn 404 'Ceci n\\\'est pas une page\\\n';\n\t}"
+sed -i "s/$search_for/$replace_with/" "$file_path";
+
+nginx -s reload;
