@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# configure nginx to add a custom header to each response
+# shellcheck disable=SC2016
+apt-get install nginx -y;
+ufw allow 'Nginx HTTP';
+service nginx restart;
+file_path='/etc/nginx/sites-available/default'
+text_before='\tserver_name _;'
+text_after='\tserver_name _;\n\n\tadd_header X-Served-By ${HOSTNAME};\n'
+sed -i "s/$text_before/$text_after/" "$file_path"
+nginx -s reload
