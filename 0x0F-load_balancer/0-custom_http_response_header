@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # configure nginx to add a custom header to each response
-# shellcheck disable=SC2154,SC2016
 apt-get install nginx -y;
 ufw allow 'Nginx HTTP';
 service nginx restart;
