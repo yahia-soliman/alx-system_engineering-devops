@@ -1,0 +1,14 @@
+listen best_school
+	bind :80
+	balance roundrobin
+	server web-01 54.210.126.177:80
+	server web-02 54.210.126.177:80
+
+frontend load_balancer
+	bind :80
+	use_backend web_servers
+
+backend web_servers
+	balance roundrobin
+	server web-01 54.210.126.177:80
+	server web-02 18.208.120.189:80
