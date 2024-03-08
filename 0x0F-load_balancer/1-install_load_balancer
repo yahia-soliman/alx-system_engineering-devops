@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # setup loadbalancer with HAProxy
 apt-get update
+apt-get upgrade -y
 apt-get install haproxy -y
 echo "ENABLED=1" >> /etc/default/haproxy
 echo -e "
