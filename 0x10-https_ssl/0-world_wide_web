@@ -9,7 +9,7 @@ fi
 
 function halfline ()
 {
-	echo -n "The sub domain $1 is a "
+	echo -n "The subdomain $1 is a "
 }
 
 for sub in "${domains[@]}"
