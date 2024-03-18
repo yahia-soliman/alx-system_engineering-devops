@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# setup firewall to allow only TCP connections to ports 22, 80, 443 only
+apt install ufw -y
+ufw disable
+service ufw stop
+ufw --force reset
+ufw default allow outgoing
+ufw default deny incoming
+ufw allow 22/tcp 
+ufw allow 80/tcp 
+ufw allow 443/tcp 
+service ufw start
+ufw --force enable
