@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # run whoami as another user
-([ "$1" ] && sudo --user="$1" whoami) || whoami
+su - "$1" -c whoami
