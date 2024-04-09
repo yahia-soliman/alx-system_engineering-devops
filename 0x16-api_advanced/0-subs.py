@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""get the number of subs"""
 import requests
 
 
