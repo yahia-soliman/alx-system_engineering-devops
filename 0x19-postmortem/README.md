@@ -11,3 +11,6 @@ Apr 9, 2024 10:50 AM EET - Dev X resolved the issue completily
 
 ## Preventative Measures
 In order to prevent facing the same issue in the future, we made a Puppet manifest that correct such typos in all the php files, this file could be run before any deployment to make sure it is typo free.
+<p align="center">
+<img src="https://hsiehbocheng.github.io/2024/03/17/debugging-in-python-with-ipdb/ipdb_meme.png">
+</p>
