@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # reload gunicorn servers gracefully, whith 0 downtime
-gunicorn_pid=$(pgrep gunicorn | head -n 1)
-[ "$gunicorn_pid" ] && kill -HUP "$gunicorn_pid"
+pkill -HUP gunicorn
